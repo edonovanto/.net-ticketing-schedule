@@ -106,3 +106,5 @@ C:\Users\novanto\source\repos\TicketingSchedule\TicketingSchedule\obj\Debug\Tick
 C:\Users\novanto\source\repos\TicketingSchedule\TicketingSchedule\obj\Debug\TicketingSchedule.csproj.CopyComplete
 C:\Users\novanto\source\repos\TicketingSchedule\TicketingSchedule\obj\Debug\TicketingSchedule.dll
 C:\Users\novanto\source\repos\TicketingSchedule\TicketingSchedule\obj\Debug\TicketingSchedule.pdb
+C:\Users\novanto\source\repos\TicketingSchedule\TicketingSchedule\obj\Debug\TicketingSchedule.Migrations.InitialModel.resources
+C:\Users\novanto\source\repos\TicketingSchedule\TicketingSchedule\obj\Debug\TicketingSchedule.csproj.GenerateResource.cache
