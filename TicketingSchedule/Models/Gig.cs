@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 
@@ -11,6 +12,7 @@ namespace TicketingSchedule.Models
         [Required]
         public ApplicationUser Artis { get; set; }
 
+        [DisplayName("Date / Time")]
         public DateTime DateTime { get; set; }
 
         [Required]
