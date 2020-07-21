@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using Microsoft.AspNet.Identity;
+using System;
+using System.Linq;
 using System.Web.Mvc;
 using TicketingSchedule.Models;
 using TicketingSchedule.ViewModels;
@@ -15,6 +17,7 @@ namespace TicketingSchedule.Controllers
             _context = new ApplicationDbContext();
         }
 
+        [Authorize]
         public ActionResult Create()
         {
 
@@ -24,6 +27,28 @@ namespace TicketingSchedule.Controllers
             };
 
             return View(viewModel);
+        }
+
+        [Authorize]
+        [HttpPost]
+        public ActionResult Create(GigFormViewModel gigFormViewModel)
+        {
+            var artistId = User.Identity.GetUserId();
+            var artist = _context.Users.Single(u => u.Id == artistId);
+            var genre = _context.Genre.Single(g => g.Id == gigFormViewModel.Genre);
+
+            var gig = new Gig
+            {
+                Artis = artist,
+                DateTime = DateTime.Parse($"{gigFormViewModel.Date} {gigFormViewModel.Time}"),
+                Venue = gigFormViewModel.Venue,
+                Genre = genre
+            };
+
+            _context.Gig.Add(gig);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Home");
         }
     }
 }

@@ -16,7 +16,7 @@ namespace TicketingSchedule.Models
         public DateTime DateTime { get; set; }
 
         [Required]
-        [StringLength(255)]
+        [StringLength(255)] 
         public string Venue { get; set; }
 
         [Required]

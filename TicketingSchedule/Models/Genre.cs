@@ -12,7 +12,7 @@ namespace TicketingSchedule.Models
         public string name { get; set; }
     }
 
-    public class GenreDbContext : DbContext
+    public class GenreDbContext : DbContext 
     {
         public GenreDbContext()
         {
