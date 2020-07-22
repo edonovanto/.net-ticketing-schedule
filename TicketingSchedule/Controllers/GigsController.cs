@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNet.Identity;
-using System;
 using System.Linq;
 using System.Web.Mvc;
 using TicketingSchedule.Models;
@@ -36,9 +35,9 @@ namespace TicketingSchedule.Controllers
             var gig = new Gig
             {
                 ArtisId = User.Identity.GetUserId(),
-                DateTime = DateTime.Parse($"{gigFormViewModel.Date} {gigFormViewModel.Time}"),
+                DateTime = gigFormViewModel.DateTime,
                 Venue = gigFormViewModel.Venue,
-                GenreId = gigFormViewModel.Genre
+                GenreId = gigFormViewModel.Genre 
             };
 
             _context.Gig.Add(gig);
