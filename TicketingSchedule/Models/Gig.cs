@@ -12,7 +12,7 @@ namespace TicketingSchedule.Models
         
         public ApplicationUser Artis { get; set; }
         [Required]
-        public string ArtistId { get; set; }
+        public string ArtisId { get; set; }
 
         [DisplayName("Date / Time")]
         public DateTime DateTime { get; set; }

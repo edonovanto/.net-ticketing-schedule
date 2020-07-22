@@ -33,16 +33,12 @@ namespace TicketingSchedule.Controllers
         [HttpPost]
         public ActionResult Create(GigFormViewModel gigFormViewModel)
         {
-            var artistId = User.Identity.GetUserId();
-            var artist = _context.Users.Single(u => u.Id == artistId);
-            var genre = _context.Genre.Single(g => g.Id == gigFormViewModel.Genre);
-
             var gig = new Gig
             {
-                Artis = artist,
+                ArtisId = User.Identity.GetUserId(),
                 DateTime = DateTime.Parse($"{gigFormViewModel.Date} {gigFormViewModel.Time}"),
                 Venue = gigFormViewModel.Venue,
-                Genre = genre
+                GenreId = gigFormViewModel.Genre
             };
 
             _context.Gig.Add(gig);
