@@ -32,10 +32,16 @@ namespace TicketingSchedule.Controllers
         [HttpPost]
         public ActionResult Create(GigFormViewModel gigFormViewModel)
         {
+            if (!ModelState.IsValid)
+            {
+                gigFormViewModel.Genres = _context.Genre.ToList();
+                return View(gigFormViewModel);
+            }
+
             var gig = new Gig
             {
                 ArtisId = User.Identity.GetUserId(),
-                DateTime = gigFormViewModel.DateTime,
+                DateTime = gigFormViewModel.GetDateTime(),
                 Venue = gigFormViewModel.Venue,
                 GenreId = gigFormViewModel.Genre 
             };
