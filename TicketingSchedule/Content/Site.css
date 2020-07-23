@@ -101,3 +101,8 @@ input, select, textarea {
 .navbar-brand {
     font-weight: bold;
 }
+
+.field-validation-error {
+    color: red;
+    font-weight: bold;
+}
