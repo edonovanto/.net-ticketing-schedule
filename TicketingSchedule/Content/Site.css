@@ -51,7 +51,7 @@ textarea {
     margin-left: 0px !important; 
 }
 
-.body-content {
+.create-form {
     margin: auto;
     width: 50%;
     padding: 0;
@@ -81,4 +81,23 @@ input, select, textarea {
 .btn-primary {
     background-color: #ff4342;
     border-color: #ff4342;
+}
+
+@media (max-width: 767px) {
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+        color: white;
+    } 
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    background-color: darksalmon;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    color: #fff;
+    background-color: #fa0000;
+}
+
+.navbar-brand {
+    font-weight: bold;
 }
