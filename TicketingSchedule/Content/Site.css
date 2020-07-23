@@ -22,3 +22,63 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/*Bootstrap Override*/
+
+.navbar-inverse {
+    background-color: #ff4342;
+    border-color: #ff4342;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: white;
+}
+
+    .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+        border-color: #dbdbdb;
+    }
+
+
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
+}
+
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
+    margin-left: 0px !important; 
+}
+
+.body-content {
+    margin: auto;
+    width: 50%;
+    padding: 0;
+}
+
+.form-control {
+    border-radius: 7px;
+}
+
+    .form-control:focus {
+        border-color: #1d90de;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(29, 144, 222, 0.2);
+    }
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+body {
+    font-family: Roboto, Lato, Helvetica, Arial, sans-serif;
+}
+
+input, select, textarea {
+    max-width: none; 
+}
+
+.btn-primary {
+    background-color: #ff4342;
+    border-color: #ff4342;
+}
