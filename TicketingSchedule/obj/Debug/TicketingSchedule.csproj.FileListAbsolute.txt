@@ -114,3 +114,4 @@ C:\Users\novanto\source\repos\TicketingSchedule\TicketingSchedule\obj\Debug\Tick
 C:\Users\novanto\source\repos\TicketingSchedule\TicketingSchedule\obj\Debug\TicketingSchedule.Migrations.AddForeignKeyPropertiesToGig.resources
 C:\Users\novanto\source\repos\TicketingSchedule\TicketingSchedule\obj\Debug\TicketingSchedule.Migrations.AddForeignKeyArtis.resources
 C:\Users\novanto\source\repos\TicketingSchedule\TicketingSchedule\obj\Debug\TicketingSchedule.Migrations.addNameToAppUser.resources
+C:\Users\novanto\source\repos\TicketingSchedule\TicketingSchedule\obj\Debug\TicketingSchedule.Migrations.AddAttendance.resources
