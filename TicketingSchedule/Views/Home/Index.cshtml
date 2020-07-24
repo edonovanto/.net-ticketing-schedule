@@ -4,16 +4,31 @@
 }
 
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <h1>Find Your Gigs!</h1>
+    <p class="lead">Book your tickets and find your favorite gigs!</p>
     <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
 
-<ul>
+<ul class="gig">
     @foreach (var gig in Model)
     {
     <li>
-        @gig.Artis.UserName - @gig.DateTime - @gig.Venue
+        <div class="date">
+            <div class="month">
+                @gig.DateTime.ToString("MMM")
+            </div>
+            <div class="day">
+                @gig.DateTime.ToString("d ")
+            </div>
+        </div>
+        <div class="details">
+            <span class="artist">
+                @gig.Artis.Name
+            </span>
+            <span class="genre">
+                @gig.Genre.name
+            </span>
+        </div>
     </li>
     }
 </ul>

@@ -106,3 +106,42 @@ input, select, textarea {
     color: red;
     font-weight: bold;
 }
+
+.gig > li {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.gig {
+    list-style: none;
+}
+
+.gig > li .details .artist {
+    display: block;
+    font-weight: bold;
+}
+
+    .gig > li .details {
+        position: absolute;
+        top: 0;
+        left: 70px;
+    }
+
+    .gig > li .date {
+        background-color: #ff4342;
+        width: 60px;
+        text-align: center;
+        color: white;
+        border-radius: 8px;
+    }
+
+    .gig > li .date .day {
+        background: white;
+        color: black;
+        border-style: solid;
+        border-width: 0 1px 1px 1px;
+    }
+
+    .gig > li .date .month {
+        font-weight: bold;
+    }

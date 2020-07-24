@@ -18,6 +18,7 @@ namespace TicketingSchedule.Controllers
         public ActionResult Index()
         {
             var upcomingGigs = _context.Gig
+                .Include(g=>g.Genre)
                 .Include(g => g.Artis)
                 .Where(g => g.DateTime > DateTime.Now);
 
