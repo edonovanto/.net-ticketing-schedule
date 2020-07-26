@@ -115,3 +115,10 @@ C:\Users\novanto\source\repos\TicketingSchedule\TicketingSchedule\obj\Debug\Tick
 C:\Users\novanto\source\repos\TicketingSchedule\TicketingSchedule\obj\Debug\TicketingSchedule.Migrations.AddForeignKeyArtis.resources
 C:\Users\novanto\source\repos\TicketingSchedule\TicketingSchedule\obj\Debug\TicketingSchedule.Migrations.addNameToAppUser.resources
 C:\Users\novanto\source\repos\TicketingSchedule\TicketingSchedule\obj\Debug\TicketingSchedule.Migrations.AddAttendance.resources
+C:\Users\novanto\source\repos\TicketingSchedule\TicketingSchedule\bin\System.Net.Http.Formatting.dll
+C:\Users\novanto\source\repos\TicketingSchedule\TicketingSchedule\bin\System.Web.Http.dll
+C:\Users\novanto\source\repos\TicketingSchedule\TicketingSchedule\bin\System.Web.Http.WebHost.dll
+C:\Users\novanto\source\repos\TicketingSchedule\TicketingSchedule\bin\System.Net.Http.Formatting.xml
+C:\Users\novanto\source\repos\TicketingSchedule\TicketingSchedule\bin\System.Web.Http.xml
+C:\Users\novanto\source\repos\TicketingSchedule\TicketingSchedule\bin\System.Web.Http.WebHost.xml
+C:\Users\novanto\source\repos\TicketingSchedule\TicketingSchedule\obj\Debug\TicketingSchedule.Migrations.addFollowing.resources
