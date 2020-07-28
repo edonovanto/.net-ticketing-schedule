@@ -145,3 +145,13 @@ input, select, textarea {
     .gig > li .date .month {
         font-weight: bold;
     }
+
+.gig > li .details .action a{
+    font-size: 15px;
+    display: none;
+    color: #ff4342;
+}
+
+.gig > li:hover .details .action a{
+    display: inline;
+}

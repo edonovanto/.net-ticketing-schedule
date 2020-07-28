@@ -1,0 +1,16 @@
+﻿
+@model TicketingSchedule.ViewModels.FollowViewModel
+@{
+    ViewBag.Title = "Following";
+}
+
+<h2>Following</h2>
+
+<ul>
+    @foreach (var gig in Model.Following)
+    {
+        <li>
+            @gig.Name
+        </li>
+    }
+</ul>

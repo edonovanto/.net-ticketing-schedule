@@ -7,7 +7,7 @@ namespace TicketingSchedule.Models
     {
         public ApplicationUser followee { get; set; }
         public ApplicationUser follower { get; set; }
-        
+
         [Key]
         [Column(Order = 1)]
         public string followeeId { get; set; }

@@ -55,6 +55,23 @@ namespace TicketingSchedule.Controllers
         }
 
         [Authorize]
+        public ActionResult Following()
+        {
+            var userId = User.Identity.GetUserId();
+            var person = _context.Followings
+                .Where(a => a.followerId == userId)
+                .Select(a => a.followee)
+                .ToList();
+
+            var viewModel = new FollowViewModel()
+            {
+                Following = person
+            };
+
+            return View(viewModel);
+        }
+
+        [Authorize]
         public ActionResult Create()
         {
 
