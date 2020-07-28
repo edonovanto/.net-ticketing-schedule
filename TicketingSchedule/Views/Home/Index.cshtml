@@ -1,4 +1,4 @@
-﻿@model IEnumerable<TicketingSchedule.Models.Gig>
+﻿@model TicketingSchedule.ViewModels.HomeViewModel
 @{
     ViewBag.Title = "Home Page";
 }
@@ -10,7 +10,7 @@
 </div>
 
 <ul class="gig">
-    @foreach (var gig in Model)
+    @foreach (var gig in Model.UpcomingGigs)
     {
         <li>
             <div class="date">
@@ -25,11 +25,17 @@
                 <span class="artist">
                     @gig.Artis.Name
                 </span>
-                <button data-user-id="@gig.ArtisId" class="btn btn-link btn-sm pull-right js-toggle-follow">Follow</button>
+                @if (Model.ShowAction)
+                {
+                    <button data-user-id="@gig.ArtisId" class="btn btn-link btn-sm pull-right js-toggle-follow">Follow</button>
+                }
                 <span class="genre">
                     @gig.Genre.name
                 </span>
-                <button data-gig-id="@gig.Id" class="btn btn-default btn-sm pull-right js-toggle-attendance">Going?</button>
+                @if (Model.ShowAction)
+                {
+                    <button data-gig-id="@gig.Id" class="btn btn-default btn-sm pull-right js-toggle-attendance">Going?</button>
+                }
             </div>
         </li>
     }

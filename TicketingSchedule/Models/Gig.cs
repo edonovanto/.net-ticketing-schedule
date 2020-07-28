@@ -1,7 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.Data.Entity;
 
 namespace TicketingSchedule.Models
 {
@@ -25,10 +24,5 @@ namespace TicketingSchedule.Models
         public Genre Genre { get; set; }
         [Required]
         public byte GenreId { get; set; }
-    }
-
-    public class GigDbContext : DbContext
-    {
-        public DbSet<Gig> Gig { get; set; }
     }
 }

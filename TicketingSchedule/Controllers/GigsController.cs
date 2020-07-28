@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNet.Identity;
+using System;
+using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
 using TicketingSchedule.Models;
@@ -14,6 +16,42 @@ namespace TicketingSchedule.Controllers
         public GigsController()
         {
             _context = new ApplicationDbContext();
+        }
+
+        [Authorize]
+        public ActionResult Mine()
+        {
+            var userId = User.Identity.GetUserId();
+            var gig = _context.Gig
+                .Where(a => a.ArtisId == userId && a.DateTime > DateTime.Now)
+                .Include(g=>g.Genre)
+                .Include(g=>g.Artis)
+                .ToList();
+
+            return View(gig);
+        }
+
+
+
+        [Authorize]
+        public ActionResult Attending()
+        {
+            var userId = User.Identity.GetUserId();
+            var gigs = _context.Attendences
+                .Where(a => a.AttendeeId == userId)
+                .Select(a => a.Gig)
+                .Include(g=>g.Artis)
+                .Include(g=>g.Genre)
+                .ToList()
+                ;
+
+            var viewModel = new HomeViewModel()
+            {
+                UpcomingGigs = gigs,
+                ShowAction = User.Identity.IsAuthenticated
+            };
+
+            return View(viewModel);
         }
 
         [Authorize]
@@ -50,7 +88,7 @@ namespace TicketingSchedule.Controllers
             _context.Gig.Add(gig);
             _context.SaveChanges();
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Mine", "Gigs");
         }
     }
 }

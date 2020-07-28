@@ -3,6 +3,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
 using TicketingSchedule.Models;
+using TicketingSchedule.ViewModels;
 
 namespace TicketingSchedule.Controllers
 {
@@ -22,7 +23,13 @@ namespace TicketingSchedule.Controllers
                 .Include(g => g.Artis)
                 .Where(g => g.DateTime > DateTime.Now);
 
-            return View(upcomingGigs);
+            var viewModel = new HomeViewModel
+            {
+                UpcomingGigs = upcomingGigs,
+                ShowAction = User.Identity.IsAuthenticated
+            };
+
+            return View(viewModel);
         }
 
         public ActionResult About()

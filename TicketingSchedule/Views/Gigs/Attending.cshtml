@@ -1,0 +1,39 @@
+﻿@model TicketingSchedule.ViewModels.HomeViewModel
+
+@{
+    ViewBag.Title = "Attending";
+}
+
+<h2>Attending</h2>
+
+<ul class="gig">
+    @foreach (var gig in Model.UpcomingGigs)
+    {
+        <li>
+            <div class="date">
+                <div class="month">
+                    @gig.DateTime.ToString("MMM")
+                </div>
+                <div class="day">
+                    @gig.DateTime.ToString("d ")
+                </div>
+            </div>
+            <div class="details">
+                <span class="artist">
+                    @gig.Artis.Name
+                </span>
+                @if (Model.ShowAction)
+                {
+                    <button data-user-id="@gig.ArtisId" class="btn btn-link btn-sm pull-right js-toggle-follow">Follow</button>
+                }
+                <span class="genre">
+                    @gig.Genre.name
+                </span>
+                @if (Model.ShowAction)
+                {
+                    <button data-gig-id="@gig.Id" class="btn btn-default btn-sm pull-right js-toggle-attendance">Going?</button>
+                }
+            </div>
+        </li>
+    }
+</ul>
